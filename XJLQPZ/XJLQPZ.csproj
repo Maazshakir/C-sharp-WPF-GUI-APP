@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Images\background.png" />
+    <None Remove="Resources\Images\business_card.png" />
+    <None Remove="Resources\Images\business_card_icon.png" />
+    <None Remove="Resources\Images\documentation.png" />
+    <None Remove="Resources\Images\info.png" />
+    <None Remove="Resources\Images\logo.png" />
+    <None Remove="Resources\Images\Payment.png" />
+    <None Remove="Resources\Images\payment_icon.png" />
+    <None Remove="Resources\Images\worksheet.png" />
+    <None Remove="Resources\Images\worksheet_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\background.png" />
+    <Resource Include="Resources\Images\business_card.png" />
+    <Resource Include="Resources\Images\business_card_icon.png" />
+    <Resource Include="Resources\Images\documentation.png" />
+    <Resource Include="Resources\Images\info.png" />
+    <Resource Include="Resources\Images\logo.png" />
+    <Resource Include="Resources\Images\Payment.png" />
+    <Resource Include="Resources\Images\payment_icon.png" />
+    <Resource Include="Resources\Images\worksheet.png" />
+    <Resource Include="Resources\Images\worksheet_icon.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,75 @@
+﻿<Page x:Class="XJLQPZ.Resources.Views.Info"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:XJLQPZ.Resources.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="391" d:DesignWidth="650"
+      Title="Info"
+      Margin="5"
+      Background="Transparent">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.85*"/>
+        </Grid.RowDefinitions>
+
+        
+        <Label Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/documentation.png"
+                       VerticalAlignment="Center"
+                       Margin="15,0,0,0"/>
+                <TextBlock Text="Project Documentation"
+                           FontSize="36"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Margin="15,0,0,0"/>
+            </StackPanel>
+            
+        </Label>
+
+        <TextBlock x:Name="documentation"/>
+
+        <ScrollViewer Grid.Row="1">
+            <TextBlock TextWrapping="Wrap"
+                       FontFamily="Arial"
+                       Padding="10,0,0,0"
+                       FontSize="14"
+                       Background="#7FC1C1C1"
+                       Foreground="Black"
+                       Margin="10,15,5,15">
+                               <LineBreak/> <Span FontSize="16"><Bold>Backend:</Bold></Span> <LineBreak/>
+ <LineBreak/> 1) There are two custom data types defined :<LineBreak/>
+	- Worksheet(MunkaLapok.cs)<LineBreak/>
+	- Work(Work.cs)<LineBreak/> 
+2) Work.cs includes the conversion of time and the calculation of labour fee (munkadij)<LineBreak/>
+3) Loader.cs consists of a single generic function for file loading<LineBreak/>
+4) Parser.cs also has a single function which parse the read line to Work data type<LineBreak/>
+5) Log.cs has 2 static lists:<LineBreak/>
+	- filename : which stores the name of file(it can be used for future enhancement)<LineBreak/>
+	- munkaLapok : which stores the worksheet data after submition (For fizetes menu)<LineBreak/>
+<LineBreak/>
+<Span FontSize="16"><Bold>GUI:</Bold></Span>  <LineBreak/>
+<LineBreak/>
+1) GUI is designed using WPF<LineBreak/>
+2) There are 4 Menus:<LineBreak/>
+	- Info : which includes documentation<LineBreak/>
+	- Munkalap : which displays the worksheet after reading file<LineBreak/>
+	- Fizetes : which displays the total submitted worksheet data<LineBreak/>
+	- Névjegy : which displays my neptun code , name and current date<LineBreak/>
+3) File can loaded by "Fajlbetöltes" button , it will performs following steps:<LineBreak/>
+	- You can only load .txt or .csv files<LineBreak/>
+	- After loading software will validate file, if there is any problem it will notify you with error message<LineBreak/>
+	- It will also enable Payment (Fizetes) and Worksheet (Munkalap) menu<LineBreak/>
+4) Exit "Kilépés" button will confirm if you would like to exit before closing the application<LineBreak/>
+            </TextBlock>
+
+            
+        </ScrollViewer>
+
+
+    </Grid>
+</Page>

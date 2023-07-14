@@ -1,0 +1,111 @@
+﻿<Window x:Class="XJLQPZ.Resources.Identity"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:XJLQPZ.Resources"
+      mc:Ignorable="d" 
+      Height="400" Width="650"
+      Title="Identity"
+      Background="Gray"
+      Icon="/Resources/Images/business_card_icon.png">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.85*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"
+               Background="Transparent">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/business_card.png" Margin="25,0,15,0"></Image>
+                <TextBlock Text="Business Card" 
+                           FontSize="36" 
+                           FontWeight="Bold"
+                           Margin="20,0,0,0"
+                           Foreground="#FF252525"/>
+            </StackPanel>
+           
+
+        </Label>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Width="15"
+                                   Height="15"
+                                   Fill="DarkGray"
+                                   Margin="10,15,0,15"></Rectangle>
+                        <TextBlock Text="Név : "
+                                   Margin="30,15,0,15"
+                                   Foreground="#FF252525"
+                                   FontSize="35"
+                                   FontWeight="Bold"></TextBlock>
+                    </StackPanel>
+                </Label>
+
+                <Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Width="15"
+                                   Height="15"
+                                   Fill="DarkGray"
+                                   Margin="10,35,0,15"></Rectangle>
+                        <TextBlock Text="NeptunKód : "
+                                   Margin="30,35,0,15"
+                                   Foreground="#FF252525"
+                                   FontSize="35"
+                                   FontWeight="Bold"></TextBlock>
+                    </StackPanel>
+                </Label>
+
+                <Label>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Width="15"
+                                   Height="15"
+                                   Fill="DarkGray"
+                                   Margin="10,35,0,25"></Rectangle>
+                        <TextBlock Text="Dátum : "
+                                   Margin="30,35,0,25"
+                                   Foreground="#FF252525"
+                                   FontSize="35"
+                                   FontWeight="Bold"></TextBlock>
+                    </StackPanel>
+                </Label>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Vertical"
+                        Grid.Column="1">
+                <TextBlock Text="Shakir Maaz"
+                           Margin="30,18,0,25"
+                           Foreground="Black"
+                           FontSize="35"
+                           FontWeight="Bold"></TextBlock>
+
+                <TextBlock Text="XJLQPZ"
+                           Margin="30,35,0,25"
+                           Foreground="Black"
+                           FontSize="35"
+                           FontWeight="Bold"></TextBlock>
+
+                <TextBlock x:Name="Date"
+                           Margin="30,35,0,25"
+                           Foreground="Black"
+                           FontSize="35"
+                           FontWeight="Bold"></TextBlock>
+            </StackPanel>
+
+        </Grid>
+
+        
+
+    </Grid>
+</Window>
